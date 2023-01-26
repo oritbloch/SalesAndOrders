@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body
+{
+padding:10px;
+test-align:right;
+direction:rtl;
+font-family:David;
+}
+p
+{
+font-size:20px;
+}
+</style>
+<meta charset="utf-8">
+</head>
+<body>
+<H1>משימת בית - מידע על מכירות מוצרים</H1>
+<p>מצורפים 2 פרוייקטים וקבצי סקריפט עבור SP.</p>
+<p>קבצי הסקריפט מכילים יצירת SP בשם: SP_GetNumOfSalesAndOrdersData ו SP_GetOrderTimesAndDates.</p>
+<p>SalesDataServices - פרוייקט עבור API בצד שרת לצורך חשיפת מידע מהSP. הגדרתי את הconnectionstring בקובץ הקונפיג.</p>
+<p>GetSalesInformationClient - פרוייקט הקליינט - האתר. מתממשק במידת הצורך לפרוייקט השרת והלינק אליו מוגדר בקובץ קונפיג.</p>
+<p><u><br/>להלן הסבר קצר על התממשקות חלקי המשימה בתוך הפרוייקטים:</u></p>
+<p>1. הצגת טבלה עבור כמות מכירות המוצרים לפי עיר ומוצר:</p>
+<p>מצד שרת - יש קונטרולר בשם GetNumOfSales שצורך על ידי הSERVICE הייעודי את הנתונים שמובאים מה SP_GetNumOfSalesAndOrdersData.</p>
+<p>מצד הקליינט - יש רכיב על הדף בשם SalesNumber שקורא למתודה GetProductSales שמביאה נתונים מה לAPI בצד שרת.</p>
+<p>2. הצגת טבלה עבור הזמנות שסופקו לפני/אחרי הזמן:</p>
+<p>מצד שרת - יש קונטרולר בשם GetOrderTimes שצורך על ידי הSERVICE הייעודי את הנתונים שמובאים מה SP_GetOrderTimesAndDates.</p>
+<p>מצד הקליינט - יש רכיב על הדף בשם OrderTimes שקורא למתודה GetOrderTimes שמביאה נתונים מה לAPI בצד שרת.</p>
+<p>3. טיימר בראש הדף מופיע על ידי הרכיב Timer והוא משתמש בlocalstorage לשמירה רציפה על כמות הזמן. לאיפוס המידע הוספתי כפתור Stop Counting.</p>
+<p>4. על מנת להציג הודעה מצד שרת לקליינט השתמשתי ברכיב SignalR. לצורך כך יש להתקין אותו מצד הפרוייקט ומצד הטרמינל. השתמשתי בפקודות הבאות:</p>
+<p>Install-Package Microsoft.AspNetCore.SignalR</p>
+<p>npm install @microsoft/signalr</p>
+<p>יש גירסאות של .NET CORE שבהן יעבוד הרכיב הזה במקום הקודם: npm install @aspnet/signalr.</p>
+<p>מצד שרת הקמתי את class TimerHub, הוספתי הגדרות מתאימות בprogram.cs.</p>
+<p>מצד האתר עצמו הוספתי רכיב לדף שנקרא GetMessageByTimer והוא יוצר connection עם הHUB שהוגדר בשרת ולהציג את ההודעה על הדף כשהיא מגיעה.</p>
+<p><u><br/>בעיה ידועה:</u></p>
+<p>עבור הסעיף האחרון - לא הצלחתי להגיע למצב של connection עם ה signalR. ידוע לי שזאת בעיה של קינפוג של ה localhost בהרצת התוכנית וכן התאמת הפורט.</p>
+<p>ניסיתי לשנות הגדרות והשגיאות שהופיעו לי בזמן הריצה הן של שגיאות התחברות או הרשאות.</p>
+<p>מאחר ותם הזמן שהקצבתי להגשת המשימה העדפתי להניח לבעיה הזו. מקווה שתוכלו לסלוח לי על זה:)</p>
+<p>אני זמינה במייל אם יש שאלות נוספות: <a href="mailto:oritc0@gmail.com">oritc0@gmail.com</a></p>
+<p><br/>ממתינה לפידקים,</p>
+<p>אורית</p>
+</body>
+</html>

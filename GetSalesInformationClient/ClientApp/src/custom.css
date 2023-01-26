@@ -1,0 +1,53 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+body{
+    padding:20px;
+}
+th, td{
+    padding:10px;
+    border:1px solid black;
+    text-align:center;
+}
+.sortedTh{
+    cursor:pointer;
+    text-decoration:underline;
+}
+.table_caption {
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+.tableDiv {
+    width: 50%;
+    float:left;
+}
+label {
+    padding: 10px;
+}
+.table-margin {
+    margin-top: 10px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+.pname
+{
+    text-align:left;
+}
+.messageFromServer {
+    color: green;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 30px;
+    font-size: 25px;
+}

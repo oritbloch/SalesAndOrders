@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@aspnet/signalr": "^1.0.27",
+    "@microsoft/signalr": "^7.0.2",
+    "react-signalr": "^0.2.14",
+    "react-table": "^7.8.0",
+    "signalr": "^2.4.3"
+  }
+}
